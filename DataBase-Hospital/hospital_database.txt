@@ -61,6 +61,8 @@ table receita {
   intrucoes_uso varchar
 }
 
+Feito no DBdiagram:
+
 // -- Tabela de quarto
 table quarto {
   id int [primary key]
