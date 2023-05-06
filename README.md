@@ -12,3 +12,6 @@ Os pacientes também precisam ser cadastrados, contendo dados pessoais, document
 
 Ainda é necessário informatizar a receita médica para que, no final da consulta, o médico possa registrar os medicamentos receitados, a quantidade e as instruções de uso. A partir disso, espera-se que o sistema imprima um relatório da receita ao paciente ou permita sua visualização via internet.
 </p>
+<br>
+<img align='center' src='DiagramaER-pt1.png'/>
+<br>
