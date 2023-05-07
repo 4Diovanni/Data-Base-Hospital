@@ -15,3 +15,7 @@ Ainda é necessário informatizar a receita médica para que, no final da consul
 <br>
 <img align='center' src='DiagramaER pt1.png'/>
 <br>
+<h3>🔹Parte 2 - Diagrama Entidade Relacionamento</h3>
+<p>
+
+</p>
