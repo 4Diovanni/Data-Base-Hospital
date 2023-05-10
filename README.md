@@ -2,7 +2,7 @@
 
 <h2>Analise a seguinte descrição e extraia dela os requisitos para o banco de dados:</h2>
 
-<h3>🔹Parte 1 - Diagrama Entidade Relacionamento (ER)</h3>
+<h3>⚡Parte 1 - Diagrama Entidade Relacionamento (ER)</h3>
 <p>
 O hospital está em busca de uma solução para gerenciar a área clínica e controlar as consultas realizadas em seu ambiente. Para isso, é necessário um banco de dados que possa armazenar e organizar as informações referentes a pacientes e médicos. 
 
@@ -15,7 +15,7 @@ Ainda é necessário informatizar a receita médica para que, no final da consul
 <br>
 <img align='center' src='DiagramaER pt1.png'/>
 <br>
-<h3>🔹Parte 2 - Diagrama Entidade Relacionamento</h3>
+<h3>⚡Parte 2 - Diagrama Entidade Relacionamento</h3>
 <p>
 
 </p>
