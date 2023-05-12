@@ -141,3 +141,7 @@ INNER JOIN internacao AS i ON enf.id = i.enfermeiro_id
 GROUP BY enf.id, enf.nome, enf.cre
 HAVING COUNT(*) > 1;
 ```
+<!-- CONTACT -->
+## Contact
+
+Giovanni Moreira - [Linkedin](https://www.linkedin.com/in/giovanni-moreira-64654a254/)
