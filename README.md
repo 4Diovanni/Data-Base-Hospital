@@ -1,38 +1,110 @@
-<h1 align='center'>Um projeto de banco de dados de um Hospital!!</h1>
+# Sistema de Gerenciamento Clínico: Hospital Database
+</h1>
+<div align='center'>
+Trabalho realizado no @Instituto Proa
+  
+designado ao professor Gabriel Augusto Azevedo
+</div>
+<h2>Descrição e requisitos para o banco de dados:</h2>
+<span>
+Descrição do Projeto
+Este projeto tem como objetivo desenvolver um sistema de gerenciamento clínico abrangente para o Hospital Database, a fim de aprimorar o controle e a eficiência da área clínica e das consultas realizadas em seu ambiente. O sistema será projetado para armazenar e organizar as informações essenciais relacionadas a pacientes e médicos, substituindo os métodos manuais e desatualizados atualmente em uso.
+</span>
 
-<h2>Analise a seguinte descrição e extraia dela os requisitos para o banco de dados:</h2>
+## 
 
-<h3>⚡Parte 1 - Diagrama Entidade Relacionamento (ER)</h3>
-<p>
-O hospital está em busca de uma solução para gerenciar a área clínica e controlar as consultas realizadas em seu ambiente. Para isso, é necessário um banco de dados que possa armazenar e organizar as informações referentes a pacientes e médicos. 
+## ⚡Parte 1 - Diagrama Entidade Relacionamento (ER)
 
-Os médicos são classificados em três categorias: generalistas, especialistas ou residentes, e suas informações pessoais devem ser registradas em planilhas digitais. É importante destacar que cada médico pode possuir uma ou mais especialidades, sendo elas pediatria, clínica geral, gastroenterologia e dermatologia. Alguns registros antigos ainda estão em formulário de papel e devem ser incluídos no novo sistema.
+#### Funcionalidades:
 
-Os pacientes também precisam ser cadastrados, contendo dados pessoais, documentos e convênios, com informações sobre nome, data de nascimento, endereço, telefone e e-mail. Para cada convênio, é necessário registrar o nome, CNPJ e tempo de carência. As consultas médicas são registradas em planilhas contendo informações sobre a data e hora da consulta, o médico responsável, o paciente, o valor da consulta ou o nome do convêniocom o número da carteira, bem como a especialidade buscada pelo paciente.
+<ul>
 
-Ainda é necessário informatizar a receita médica para que, no final da consulta, o médico possa registrar os medicamentos receitados, a quantidade e as instruções de uso. A partir disso, espera-se que o sistema imprima um relatório da receita ao paciente ou permita sua visualização via internet.
-</p>
+<li>Cadastro de Médicos: Os médicos serão classificados em três categorias (generalistas, especialistas ou residentes) e suas informações pessoais serão registradas em planilhas digitais. Cada médico pode ter uma ou mais especialidades, como pediatria, clínica geral, gastroenterologia e dermatologia. Os registros antigos em formulários de papel também poderão ser incluídos no sistema.</li>
+<br>
+<li>Cadastro de Pacientes: Será possível cadastrar pacientes com detalhes pessoais, documentos e informações de convênio, como nome, data de nascimento, endereço, telefone e e-mail. Para cada convênio, será registrado o nome, CNPJ e tempo de carência.</li>
+<br>
+<li>Agendamento e Registro de Consultas: O sistema permitirá o agendamento e registro de consultas médicas. As consultas serão registradas em planilhas, contendo informações como data, hora, médico responsável, paciente, valor da consulta ou nome do convênio com o número da carteira, e a especialidade buscada pelo paciente.</li>
+<br>
+<li>Receita Médica Eletrônica: O sistema informatizará a emissão de receitas médicas. Ao final da consulta, o médico poderá registrar os medicamentos prescritos, a quantidade e as instruções de uso. O sistema poderá imprimir um relatório da receita para o paciente ou permitir a visualização online.</li>
+  
+</ul>
 <br>
 <img align='center' src='DiagramaER pt1.png'/>
 <br>
-<h3>⚡Parte 2 - Diagrama Entidade Relacionamento (ER)</h3>
-<p>
-No hospital, as internações têm sido registradas por meio de formulários eletrônicos que gravam os dados em arquivos. 
 
-Para cada internação, são anotadas a data de entrada, a data prevista de alta e a data efetiva de alta, além da descrição textual dos procedimentos a serem realizados. 
+#### Benefícios:
 
-As internações precisam ser vinculadas a quartos, com a numeração e o tipo. 
+<ul>
+  
+<li>Eficiência no agendamento e controle de consultas médicas.</li>
 
-Cada tipo de quarto tem sua descrição e o seu valor diário (a princípio, o hospital trabalha com apartamentos, quartos duplos e enfermaria).
+<li>Acesso rápido e fácil às informações de pacientes e médicos.</li>
 
-Também é necessário controlar quais profissionais de enfermaria estarão responsáveis por acompanhar o paciente durante sua internação. Para cada enfermeiro(a), é necessário nome, CPF e registro no conselho de enfermagem (CRE).
+<li>Eliminação de erros e redundâncias dos métodos manuais.</li>
 
-A internação, obviamente, é vinculada a um paciente – que pode se internar mais de uma vez no hospital – e a um único médico responsável.
-</p>
+<li>Armazenamento seguro e organizado de dados clínicos e pessoais.</li>
+
+<li>Melhoria na comunicação e colaboração entre médicos e pacientes.</li>
+
+<li>Redução do tempo de espera e otimização do atendimento ao paciente.</li>
+  
+<li>Geração de relatórios e análises estatísticas.</li>
+  
+</ul>
+
+## 
+
+## ⚡Parte 2 - Diagrama Entidade Relacionamento (ER)
+
+#### Funcionalidades:
+
+<ul>
+  
+  <li>Registro de Internações: Será possível registrar as internações com informações como data de entrada, data prevista de alta e data efetiva de alta. Além disso, será feita uma descrição textual dos procedimentos a serem realizados durante a internação.</li>
+  <br>
+  <li>Vinculação a Quartos: Cada internação será vinculada a um quarto específico, contendo a numeração e o tipo do quarto. Os tipos de quartos incluirão apartamentos, quartos duplos e enfermarias. Cada tipo de quarto terá sua descrição e valor diário associados.</li>
+  <br>
+  <li>Atribuição de Enfermeiros: Será realizado o controle dos profissionais de enfermagem responsáveis pelo acompanhamento do paciente durante a internação. Cada enfermeiro(a) será registrado com nome, CPF e registro no conselho de enfermagem (CRE).</li>
+  <br>
+  <li>Vínculo com Paciente e Médico Responsável: Cada internação estará associada a um paciente específico, permitindo que um mesmo paciente se interne mais de uma vez. Além disso, será registrado o médico responsável pela internação do paciente.</li>
+  
+</ul>
+
+
 <br>
 <img align='center' src='DiagramaER pt2.png'/>
 <br>
-<h3>⚡Parte 3 - Adicionando a tabela </h3>
+
+#### Benefícios:
+
+<ul>
+  
+  <li>Eficiência no registro e controle das internações hospitalares.</li>
+  
+  <li>Controle adequado da ocupação dos quartos e tipos de quartos disponíveis.</li>
+  
+  <li>Atribuição correta de enfermeiros responsáveis pelo acompanhamento dos pacientes durante a internação.</li>
+  
+  <li>Facilidade na identificação do médico responsável por cada internação.</li>
+  
+  <li>Agilidade na busca e análise das informações das internações.</li>
+  
+  <li>Melhoria na organização e gestão das internações hospitalares.</li>
+  
+  <li>Otimização dos recursos e melhor aproveitamento dos quartos disponíveis.</li>
+  
+  <li>Redução de erros e inconsistências nos registros das internações.</li>
+  
+  <li>Melhoria na comunicação entre equipes médicas, enfermeiros e pacientes durante as internações.</li>
+  
+  <li>Geração de relatórios e análises estatísticas para auxiliar na tomada de decisões e planejamento hospitalar.</li>
+  
+</ul>
+
+## 
+
+## ⚡Parte 3 - Adicionando a tabela
+
 <p>
 <ul>
 <li>Inclua ao menos dez médicos de </li>
@@ -52,7 +124,11 @@ A internação, obviamente, é vinculada a um paciente – que pode se internar 
 </ul>
 </p>
 <br>
-<h3>⚡Parte 4 - AlterAndo a tabela </h3>
+
+## 
+
+## ⚡Parte 4 - AlterAndo a tabela
+
 <br>
 <p>
 Pensando no banco que já foi criado para o Projeto do Hospital, realize algumas alterações nas tabelas e nos dados usando comandos de atualização e exclusão:
@@ -61,7 +137,9 @@ Crie um script que adicione uma coluna “em_atividade” para os médicos, indi
 </p>
 <img align='center' src='ALTERando_Tabela.png'/>
 
-<h3>⚡Parte 4 - Estruturando e testando </h3>
+## 
+
+## ⚡Parte 4 - Estruturando e testando 
 
 * Todos os dados e o valor médio das consultas do ano de 2020 e das que foram feitas sob convênio.
 ```
@@ -145,3 +223,5 @@ HAVING COUNT(*) > 1;
 ## Contact
 
 Giovanni Moreira - [Linkedin](https://www.linkedin.com/in/giovanni-moreira-64654a254/)
+
+Project Link: [https://github.com/4Diovanni/Data-Base-Hospital.git](https://github.com/github_username/repo_name)
