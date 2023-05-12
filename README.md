@@ -2,9 +2,10 @@
 
 <br />
 <div align="center">
-  <a href="https://github.com/4lvesgabriel/hospital_bd">
+  <a href="https://github.com/4Diovanni/Data-Base-Hospital.git">
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="Logo" width="80" height="80">
   </a>
+</div>
 
 </h1>
 <div align='center'>
