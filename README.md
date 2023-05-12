@@ -15,7 +15,7 @@ Ainda é necessário informatizar a receita médica para que, no final da consul
 <br>
 <img align='center' src='DiagramaER pt1.png'/>
 <br>
-###<h3>⚡Parte 2 - Diagrama Entidade Relacionamento (ER)</h3>
+<h3>⚡Parte 2 - Diagrama Entidade Relacionamento (ER)</h3>
 <p>
 No hospital, as internações têm sido registradas por meio de formulários eletrônicos que gravam os dados em arquivos. 
 
@@ -91,11 +91,20 @@ GROUP BY consulta.id;
 ```
 * Todos os dados das internações em seus respectivos quartos, calculando o total da internação a partir do valor de diária do quarto e o número de dias entre a entrada e a alta.
 ```
-
+select *, DATEDIFF(data_alta, data_entrada) dias_internado, tipo_quarto.valor_diaria,
+DATEDIFF(data_alta, data_entrada) * tipo_quarto.valor_diaria valor_total 
+from internacao 
+inner join quarto 
+on internacao.quarto_id = quarto.id
+inner join tipo_quarto 
+on quarto.id = tipo_quarto.id;
 ```
 * Data, procedimento e número de quarto de internações em quartos do tipo “apartamento”.
 ```
-
+select internacao.id, internacao.data_entrada, internacao.descricao_procedimento, quarto.numero 
+from internacao 
+inner join quarto 
+on quarto.id = internacao.quarto_id where quarto.id = 1; 
 ```
 * Nome do paciente, data da consulta e especialidade de todas as consultas em que os pacientes eram menores de 18 anos na data da consulta e cuja especialidade não seja “pediatria”, ordenando por data de realização da consulta.
 ```
