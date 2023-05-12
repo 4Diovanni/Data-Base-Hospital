@@ -1,4 +1,11 @@
 # Sistema de Gerenciamento Clínico: Hospital Database
+
+<br />
+<div align="center">
+  <a href="https://github.com/4lvesgabriel/hospital_bd">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="Logo" width="80" height="80">
+  </a>
+
 </h1>
 <div align='center'>
 Trabalho realizado no @Instituto Proa
