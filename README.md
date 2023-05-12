@@ -108,21 +108,36 @@ on quarto.id = internacao.quarto_id where quarto.id = 1;
 ```
 * Nome do paciente, data da consulta e especialidade de todas as consultas em que os pacientes eram menores de 18 anos na data da consulta e cuja especialidade não seja “pediatria”, ordenando por data de realização da consulta.
 ```
-
+SELECT p.nome AS nome_paciente, c.data_hora, m.especialidade_id
+FROM consulta AS c
+INNER JOIN paciente AS p ON c.paciente_id = p.id
+INNER JOIN medicos AS m ON c.medico_id = m.id
+WHERE TIMESTAMPDIFF(YEAR, p.data_nascimento, c.data_hora) < 18
+  AND m.especialidade_id <> 'pediatria'
+ORDER BY c.data_hora;
 ```
 * Nome do paciente, nome do médico, data da internação e procedimentos das internações realizadas por médicos da especialidade “gastroenterologia”, que tenham acontecido em “enfermaria”.
 ```
-
+SELECT p.nome AS nome_paciente, m.nome AS nome_medico, i.data_entrada, i.descricao_procedimento
+FROM internacao AS i
+INNER JOIN paciente AS p ON i.paciente_id = p.id
+INNER JOIN medicos AS m ON i.medico_id = m.id
+WHERE m.especialidade_id = '1';
 ```
 * Os nomes dos médicos, seus CRMs e a quantidade de consultas que cada um realizou.
 ```
-
+select m.nome, count(c.medico_id) as 'Qntd de consultas' from medicos m inner join consulta c 
+on c.medico_id = m.id group by c.medico_id;
 ```
 * Todos os médicos que tenham "Gabriel" no nome. 
 ```
-
+select * from medicos where nome like '%Gabriel%';
 ```
 * Os nomes, CREs e número de internações de enfermeiros que participaram de mais de uma internação.
 ```
-
+SELECT enf.nome AS nome_enfermeiro, enf.cre, COUNT(*) AS numero_internacoes
+FROM enfermeiro AS enf
+INNER JOIN internacao AS i ON enf.id = i.enfermeiro_id
+GROUP BY enf.id, enf.nome, enf.cre
+HAVING COUNT(*) > 1;
 ```
