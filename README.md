@@ -139,7 +139,7 @@ Crie um script que adicione uma coluna “em_atividade” para os médicos, indi
 
 ## 
 
-## ⚡Parte 4 - Estruturando e testando 
+## ⚡Parte 5 - Estruturando e testando 
 
 * Todos os dados e o valor médio das consultas do ano de 2020 e das que foram feitas sob convênio.
 ```
