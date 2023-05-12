@@ -15,7 +15,7 @@ Ainda é necessário informatizar a receita médica para que, no final da consul
 <br>
 <img align='center' src='DiagramaER pt1.png'/>
 <br>
-<h3>⚡Parte 2 - Diagrama Entidade Relacionamento (ER)</h3>
+###<h3>⚡Parte 2 - Diagrama Entidade Relacionamento (ER)</h3>
 <p>
 No hospital, as internações têm sido registradas por meio de formulários eletrônicos que gravam os dados em arquivos. 
 
@@ -60,3 +60,60 @@ Pensando no banco que já foi criado para o Projeto do Hospital, realize algumas
 Crie um script que adicione uma coluna “em_atividade” para os médicos, indicando se ele ainda está atuando no hospital ou não. 
 </p>
 <img align='center' src='ALTERando_Tabela.png'/>
+
+<h3>⚡Parte 4 - Estruturando e testando </h3>
+
+* Todos os dados e o valor médio das consultas do ano de 2020 e das que foram feitas sob convênio.
+```
+SELECT *, AVG(valor_consulta) 
+FROM consulta 
+WHERE YEAR(data_hora) = 2020 
+GROUP BY id 
+LIMIT 1000;
+```
+* Todos os dados das internações que tiveram data de alta maior que a data prevista para a alta.
+```
+select * from internacao
+where data_alta > data_prev_alta;
+```
+* Receituário completo da primeira consulta registrada com receituário associado.
+```
+select * from consulta inner join receita on consulta.id = receita.id inner join paciente 
+on paciente.id = consulta.id order by receita.id limit 1;
+```
+* Todos os dados da consulta de maior valor e também da de menor valor (ambas as consultas não foram realizadas sob convênio).
+```
+SELECT consulta.*, MAX(consulta.valor_consulta) AS max_valor_consulta, MIN(consulta.valor_consulta) AS min_valor_consulta 
+FROM consulta
+INNER JOIN paciente ON consulta.paciente_id = paciente.id
+WHERE paciente.convenio_id IS NULL
+GROUP BY consulta.id;
+```
+* Todos os dados das internações em seus respectivos quartos, calculando o total da internação a partir do valor de diária do quarto e o número de dias entre a entrada e a alta.
+```
+
+```
+* Data, procedimento e número de quarto de internações em quartos do tipo “apartamento”.
+```
+
+```
+* Nome do paciente, data da consulta e especialidade de todas as consultas em que os pacientes eram menores de 18 anos na data da consulta e cuja especialidade não seja “pediatria”, ordenando por data de realização da consulta.
+```
+
+```
+* Nome do paciente, nome do médico, data da internação e procedimentos das internações realizadas por médicos da especialidade “gastroenterologia”, que tenham acontecido em “enfermaria”.
+```
+
+```
+* Os nomes dos médicos, seus CRMs e a quantidade de consultas que cada um realizou.
+```
+
+```
+* Todos os médicos que tenham "Gabriel" no nome. 
+```
+
+```
+* Os nomes, CREs e número de internações de enfermeiros que participaram de mais de uma internação.
+```
+
+```
